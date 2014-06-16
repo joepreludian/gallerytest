@@ -1,0 +1,5 @@
+Django==1.6.5
+Pillow==2.4.0
+South==0.8.4
+django-versatileimagefield==0.1.2
+wsgiref==0.1.2
