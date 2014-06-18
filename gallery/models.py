@@ -8,6 +8,10 @@ class Galeria(models.Model):
     def __unicode__(self):
         return self.nome
 
+    @property
+    def fotos_quantidade(self):
+        return self.fotos.count()
+
 
 class Foto(models.Model):
     galeria = models.ForeignKey(Galeria, related_name='fotos')
