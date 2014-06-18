@@ -5,3 +5,4 @@ static/
 media/
 env/
 test_media/
+.DS_Store
