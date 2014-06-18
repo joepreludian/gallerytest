@@ -1,0 +1,14 @@
+{
+  "name": "Globocom",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joepreludian/gallerytest",
+  "authors": [
+    "Jonhnatha Trigueiro <joepreludian@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-less": "~3.1.1",
+    "jquery": "~2.1.1"
+  }
+}
