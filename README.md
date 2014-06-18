@@ -15,7 +15,8 @@ Fazendo do zero (sem ao menos ter baixado esse repositório), faça:
     git clone https://github.com/joepreludian/gallerytest.git heygallery
     cd heygallery
     make setup
-    
+Durante o ultimo comando você será convidado a criar uma conta de administrador pro sistema. Esta será importante pra adicionar as galerias.
+
 Para rodar o projeto web basta fazer:
 
     make run
@@ -43,3 +44,4 @@ Usei as seguintes:
 
 ### Obrigado
 Qualquer coisa *mail me*.
+Enjoy!
