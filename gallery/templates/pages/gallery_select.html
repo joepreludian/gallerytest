@@ -17,6 +17,10 @@
          <div class="row">
         {% endif %}
 
+        {% empty %}
+            <h4><span class="glyphicon glyphicon-file"></span> Sem galerias</h4>
+            <p>Que tal começar cadastrando uma? =)</p>
+            <a href="/admin/gallery/galeria/add/">Visitar o painel administrativo</a>
         {% endfor %}
     </div>
 {% endblock %}
