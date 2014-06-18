@@ -1,0 +1,46 @@
+.robgallery {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* <3 */
+}
+.robgallery li {
+  padding: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.robgallery li.item {
+  display: none;
+  text-align: center;
+}
+.robgallery li.item span {
+  display: block;
+}
+.robgallery li.item span.counter {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.robgallery li.right,
+.robgallery li.left {
+  width: 98px;
+  height: 98px;
+  background: #000;
+  display: block;
+  text-indent: -999em;
+  position: absolute;
+  top: 50%;
+  margin-top: -49px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer !important;
+}
+.robgallery li.left {
+  background: url('../images/seta_esquerda.jpg') center no-repeat;
+  left: 0;
+}
+.robgallery li.right {
+  background: url('../images/seta_direita.jpg') center no-repeat;
+  right: 0;
+}
