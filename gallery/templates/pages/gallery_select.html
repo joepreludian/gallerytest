@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Galerias{% endblock %}
+{% block content %}
+ <div class="container">
+    <div class="row">
+        {% for item in lista %}
+            <div class="col-sm-3" style="text-align: center">
+                <div class="well well-small">
+                    {{ item.nome }}
+                    <hr>
+                    <a href="{% url 'gallery.views.gallery_detail' gallery_id=item.id %}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-zoom-in"></span> Visualizar  | {{ item.fotos_quantidade }}</a>
+                </div>
+            </div>
+
+        {% if forloop.counter|divisibleby:4 %}
+         </div>
+         <div class="row">
+        {% endif %}
+
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+</script>
+{% endblock %}

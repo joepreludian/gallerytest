@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}{{ galeria.nome }}{% endblock %}
+{% block content %}
+    <ul id="carrosel">
+        {% for item in fotos %}
+        <li>
+            <img src="{{ item.foto.crop.640x480.url }}">
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ STATIC_URL }}robgallery/css/robgallery.css">
+{% endblock %}
+{% block footer %}
+<script type="text/javascript" src="{{ STATIC_URL }}/robgallery/robgallery.js"></script>
+<script type="text/javascript">
+ $(function(){
+    $('#carrosel').robgallery();
+ });
+</script>
+{% endblock %}
