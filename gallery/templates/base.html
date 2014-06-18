@@ -1,11 +1,48 @@
-{% load bootstrap3 %}
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+  <meta charset="utf-8">
+  <title>Globo.com Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site demonstração de galeria de imagens em Jquery">
+  <meta name="author" content="Jonhnatha Trigueiro">
+  <link href="{{ STATIC_URL }}/bower_components/bootstrap-less/css/bootswatch.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="{{ STATIC_URL }}/bower_components/jquery/dist/jquery.min.js"></script>
+  {% block header %}{% endblock %}
 </head>
 <body>
-    Base
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'gallery.views.gallery' %}"><span class="glyphicon glyphicon-globe"></span> Globo.com</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="http://joey.universo42.com.br" target="_blank">Jonhnatha</a>
+          </li>
+          <li>
+            <a href="https://github.com/joepreludian/gallerytest" target="_blank">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <h1>{% block title %}{% endblock %}</h1>
+      <hr>
+      </div>
+
+    <div class="row">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="row">
+
+        <hr>
+        <span class="muted small">2014 &copy;<br/>Jonhnatha Trigueiro</span>
+    </div>
+  </div>
+  {% block footer %}{% endblock %}
 </body>
 </html>
